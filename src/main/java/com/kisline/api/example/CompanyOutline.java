@@ -12,6 +12,11 @@ import okhttp3.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
+import com.kisline.api.example.CompanyOutlineObject;
+
 public class CompanyOutline {
 	private static final Logger LOGGER = LogManager.getLogger("CompanyOutline");
 
@@ -34,6 +39,10 @@ public class CompanyOutline {
 			StringBuilder sb = new StringBuilder();
 			String key = "";
 			String value = "";
+			String json = "";
+
+			Gson gson = new Gson();
+			JsonParser parser = new JsonParser();
 
 			paramMap.put("kiscode", "380725");
 
@@ -54,10 +63,19 @@ public class CompanyOutline {
 
 			Response response = client.newCall(request).execute();
 
+			json = response.body().string();
+
 			LOGGER.info(response.headers().toString());
-			LOGGER.info(response.body().string());
+			LOGGER.info(json);
 
+			JsonElement element = parser.parse(json).getAsJsonObject().get("items").getAsJsonObject().get("item");
 
+			CompanyOutlineObject[] example = gson.fromJson(element, CompanyOutlineObject[].class);
+
+			for (CompanyOutlineObject temp : example) {
+				LOGGER.info("bizno = " + temp.getBizno());
+				LOGGER.info("opt_entrnm = " + temp.getOpt_entrnm());
+			}
 		} catch (IOException ioe) {
 			LOGGER.error(ioe);
 		}
