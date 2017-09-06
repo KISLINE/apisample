@@ -36,7 +36,6 @@ public class CompanyOutline {
 			String value = "";
 
 			paramMap.put("kiscode", "380725");
-			paramMap.put("bizno", "1248100998");
 
 			for (Iterator<String> it = paramMap.keySet().iterator(); it.hasNext();) {
 				key = String.valueOf(it.next());
