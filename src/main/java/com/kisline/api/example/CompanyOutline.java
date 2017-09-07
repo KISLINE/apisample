@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -56,6 +57,12 @@ public class CompanyOutline {
 			}
 
 			OkHttpClient client = new OkHttpClient();
+			
+			client = new OkHttpClient.Builder()
+			        .connectTimeout(10, TimeUnit.SECONDS)
+			        .writeTimeout(10, TimeUnit.SECONDS)
+			        .readTimeout(30, TimeUnit.SECONDS)
+			        .build();			
 
 			Request request = new Request.Builder().url(APIBASEURL + APIURL + "?uid=" + UID + sb).get()
 					.addHeader("x-ibm-client-id", CLIENTID).addHeader("x-ibm-client-secret", CLIENTSECRET)
