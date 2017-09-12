@@ -16,20 +16,10 @@ import org.apache.logging.log4j.Logger;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
-import com.kisline.api.example.CompanyOutlineObject;
 
-public class CompanyOutline {
+public class CompanyOutline extends Base {
 	private static final Logger LOGGER = LogManager.getLogger("CompanyOutline");
 
-	private static final String UID = "발급해 드린 UID를 사용하세요.";
-	private static final String CLIENTID = "발급해 드린 clientId를 사용하세요.";
-	private static final String CLIENTSECRET = "발급해 드린 clientSecret을 사용하세요.";
-
-	// XML 또는 JSON으로 응답을 선택합니다.
-	private static final String RESPONSETYPE = "application/json";
-	// private static final String RESPONSETYPE = "application/xml";
-
-	private static final String APIBASEURL = "https://api.kisline.com/nice/sb/api";
 	private static final String APIURL = "/companyOutlineIfo/companyOutline";
 
 	public static void main(String[] args) {
@@ -57,12 +47,9 @@ public class CompanyOutline {
 			}
 
 			OkHttpClient client = new OkHttpClient();
-			
-			client = new OkHttpClient.Builder()
-			        .connectTimeout(10, TimeUnit.SECONDS)
-			        .writeTimeout(10, TimeUnit.SECONDS)
-			        .readTimeout(30, TimeUnit.SECONDS)
-			        .build();			
+
+			client = new OkHttpClient.Builder().connectTimeout(10, TimeUnit.SECONDS).writeTimeout(10, TimeUnit.SECONDS)
+					.readTimeout(30, TimeUnit.SECONDS).build();
 
 			Request request = new Request.Builder().url(APIBASEURL + APIURL + "?uid=" + UID + sb).get()
 					.addHeader("x-ibm-client-id", CLIENTID).addHeader("x-ibm-client-secret", CLIENTSECRET)
@@ -77,9 +64,9 @@ public class CompanyOutline {
 
 			JsonElement element = parser.parse(json).getAsJsonObject().get("items").getAsJsonObject().get("item");
 
-			CompanyOutlineObject[] example = gson.fromJson(element, CompanyOutlineObject[].class);
+			ResultObject[] example = gson.fromJson(element, ResultObject[].class);
 
-			for (CompanyOutlineObject temp : example) {
+			for (ResultObject temp : example) {
 				LOGGER.info("bizno = " + temp.getBizno());
 				LOGGER.info("opt_entrnm = " + temp.getOpt_entrnm());
 			}
