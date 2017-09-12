@@ -10,6 +10,7 @@ public class ResultObject {
 	private String biyul6;
 	private String biyul7;
 	private String bizno;
+	private String bnknm;
 	private String bogosu;
 	private String business;
 
@@ -18,12 +19,16 @@ public class ResultObject {
 
 	private String divnm;
 
+	private String empnum_bse_date;
 	private String engentrnm;
+	private String etl_ipc_yn;
 
 	private String fa_ogx_yn;
 	private String fadivcd;
 	private String farptcd;
 	private String farptitemcd;
+	
+	private String grpnm;
 
 	private String han0;
 	private String han1;
@@ -35,6 +40,8 @@ public class ResultObject {
 	private String kiscode;
 	private String kor_tofivnt;
 	private String korentrnm;
+	
+	private String mainpdtpcl;
 
 	private String name_eng;
 	private String name_kor;
@@ -47,13 +54,19 @@ public class ResultObject {
 	private String opt_entrnm;
 
 	private String s_seq;
+	private String sbn_date;
 	private String seq;
 	private String stac_date;
 	private String stac_yyyy;
 	private String stac_yyyy0;
 	private String stacdivcd;
+	private String stkcd;
 
 	private String upchecd;
+	
+	private String zcd1;
+	private String zcd2;
+	private String zcd3;
 
 	public String getAmnisuyn() {
 		return amnisuyn;
@@ -87,8 +100,16 @@ public class ResultObject {
 		return bizno;
 	}
 
+	public String getBnknm() {
+		return bnknm;
+	}
+
 	public String getBogosu() {
 		return bogosu;
+	}
+
+	public String getBusiness() {
+		return business;
 	}
 
 	public String getChk_cont() {
@@ -103,8 +124,16 @@ public class ResultObject {
 		return divnm;
 	}
 
+	public String getEmpnum_bse_date() {
+		return empnum_bse_date;
+	}
+
 	public String getEngentrnm() {
 		return engentrnm;
+	}
+
+	public String getEtl_ipc_yn() {
+		return etl_ipc_yn;
 	}
 
 	public String getFa_ogx_yn() {
@@ -121,6 +150,10 @@ public class ResultObject {
 
 	public String getFarptitemcd() {
 		return farptitemcd;
+	}
+
+	public String getGrpnm() {
+		return grpnm;
 	}
 
 	public String getHan0() {
@@ -159,6 +192,10 @@ public class ResultObject {
 		return korentrnm;
 	}
 
+	public String getMainpdtpcl() {
+		return mainpdtpcl;
+	}
+
 	public String getName_eng() {
 		return name_eng;
 	}
@@ -195,6 +232,10 @@ public class ResultObject {
 		return s_seq;
 	}
 
+	public String getSbn_date() {
+		return sbn_date;
+	}
+
 	public String getSeq() {
 		return seq;
 	}
@@ -215,8 +256,24 @@ public class ResultObject {
 		return stacdivcd;
 	}
 
+	public String getStkcd() {
+		return stkcd;
+	}
+
 	public String getUpchecd() {
 		return upchecd;
+	}
+
+	public String getZcd1() {
+		return zcd1;
+	}
+
+	public String getZcd2() {
+		return zcd2;
+	}
+
+	public String getZcd3() {
+		return zcd3;
 	}
 
 	public void setAmnisuyn(String amnisuyn) {
@@ -251,8 +308,16 @@ public class ResultObject {
 		this.bizno = bizno;
 	}
 
+	public void setBnknm(String bnknm) {
+		this.bnknm = bnknm;
+	}
+
 	public void setBogosu(String bogosu) {
 		this.bogosu = bogosu;
+	}
+
+	public void setBusiness(String business) {
+		this.business = business;
 	}
 
 	public void setChk_cont(String chk_cont) {
@@ -267,8 +332,16 @@ public class ResultObject {
 		this.divnm = divnm;
 	}
 
+	public void setEmpnum_bse_date(String empnum_bse_date) {
+		this.empnum_bse_date = empnum_bse_date;
+	}
+
 	public void setEngentrnm(String engentrnm) {
 		this.engentrnm = engentrnm;
+	}
+
+	public void setEtl_ipc_yn(String etl_ipc_yn) {
+		this.etl_ipc_yn = etl_ipc_yn;
 	}
 
 	public void setFa_ogx_yn(String fa_ogx_yn) {
@@ -285,6 +358,10 @@ public class ResultObject {
 
 	public void setFarptitemcd(String farptitemcd) {
 		this.farptitemcd = farptitemcd;
+	}
+
+	public void setGrpnm(String grpnm) {
+		this.grpnm = grpnm;
 	}
 
 	public void setHan0(String han0) {
@@ -323,6 +400,10 @@ public class ResultObject {
 		this.korentrnm = korentrnm;
 	}
 
+	public void setMainpdtpcl(String mainpdtpcl) {
+		this.mainpdtpcl = mainpdtpcl;
+	}
+
 	public void setName_eng(String name_eng) {
 		this.name_eng = name_eng;
 	}
@@ -359,6 +440,10 @@ public class ResultObject {
 		this.s_seq = s_seq;
 	}
 
+	public void setSbn_date(String sbn_date) {
+		this.sbn_date = sbn_date;
+	}
+
 	public void setSeq(String seq) {
 		this.seq = seq;
 	}
@@ -379,15 +464,23 @@ public class ResultObject {
 		this.stacdivcd = stacdivcd;
 	}
 
+	public void setStkcd(String stkcd) {
+		this.stkcd = stkcd;
+	}
+
 	public void setUpchecd(String upchecd) {
 		this.upchecd = upchecd;
 	}
 
-	public String getBusiness() {
-		return business;
+	public void setZcd1(String zcd1) {
+		this.zcd1 = zcd1;
 	}
 
-	public void setBusiness(String business) {
-		this.business = business;
+	public void setZcd2(String zcd2) {
+		this.zcd2 = zcd2;
+	}
+
+	public void setZcd3(String zcd3) {
+		this.zcd3 = zcd3;
 	}
 }
