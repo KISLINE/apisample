@@ -46,7 +46,7 @@ public class CompanyOutline extends Base {
 				sb.append(value);
 			}
 
-			OkHttpClient client = new OkHttpClient();
+			OkHttpClient client;
 
 			client = new OkHttpClient.Builder().connectTimeout(10, TimeUnit.SECONDS).writeTimeout(10, TimeUnit.SECONDS)
 					.readTimeout(30, TimeUnit.SECONDS).build();

@@ -27,7 +27,7 @@ public class ResultObject {
 	private String fadivcd;
 	private String farptcd;
 	private String farptitemcd;
-	
+
 	private String grpnm;
 
 	private String han0;
@@ -40,7 +40,7 @@ public class ResultObject {
 	private String kiscode;
 	private String kor_tofivnt;
 	private String korentrnm;
-	
+
 	private String mainpdtpcl;
 
 	private String name_eng;
@@ -63,7 +63,7 @@ public class ResultObject {
 	private String stkcd;
 
 	private String upchecd;
-	
+
 	private String zcd1;
 	private String zcd2;
 	private String zcd3;
