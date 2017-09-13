@@ -15,6 +15,9 @@ public class ResultObject {
 	private String business;
 
 	private String chk_cont;
+	private String cmprt0;
+	private String cmprt1;
+	private String cmprt2;
 	private String cont;
 
 	private String divnm;
@@ -27,6 +30,9 @@ public class ResultObject {
 	private String fadivcd;
 	private String farptcd;
 	private String farptitemcd;
+	private String fvl0;
+	private String fvl1;
+	private String fvl2;
 
 	private String grpnm;
 
@@ -36,12 +42,17 @@ public class ResultObject {
 	private String han3;
 	private String han6;
 	private String hang;
+	
+	private String indrt0;
+	private String indrt1;
+	private String indrt2;
 
 	private String kiscode;
 	private String kor_tofivnt;
 	private String korentrnm;
 
 	private String mainpdtpcl;
+	private String monunit;
 
 	private String name_eng;
 	private String name_kor;
@@ -61,6 +72,8 @@ public class ResultObject {
 	private String stac_yyyy0;
 	private String stacdivcd;
 	private String stkcd;
+	
+	private String tlevel;
 
 	private String upchecd;
 
@@ -116,6 +129,18 @@ public class ResultObject {
 		return chk_cont;
 	}
 
+	public String getCmprt0() {
+		return cmprt0;
+	}
+
+	public String getCmprt1() {
+		return cmprt1;
+	}
+
+	public String getCmprt2() {
+		return cmprt2;
+	}
+
 	public String getCont() {
 		return cont;
 	}
@@ -152,6 +177,18 @@ public class ResultObject {
 		return farptitemcd;
 	}
 
+	public String getFvl0() {
+		return fvl0;
+	}
+
+	public String getFvl1() {
+		return fvl1;
+	}
+
+	public String getFvl2() {
+		return fvl2;
+	}
+
 	public String getGrpnm() {
 		return grpnm;
 	}
@@ -180,6 +217,18 @@ public class ResultObject {
 		return hang;
 	}
 
+	public String getIndrt0() {
+		return indrt0;
+	}
+
+	public String getIndrt1() {
+		return indrt1;
+	}
+
+	public String getIndrt2() {
+		return indrt2;
+	}
+
 	public String getKiscode() {
 		return kiscode;
 	}
@@ -194,6 +243,10 @@ public class ResultObject {
 
 	public String getMainpdtpcl() {
 		return mainpdtpcl;
+	}
+
+	public String getMonunit() {
+		return monunit;
 	}
 
 	public String getName_eng() {
@@ -260,6 +313,10 @@ public class ResultObject {
 		return stkcd;
 	}
 
+	public String getTlevel() {
+		return tlevel;
+	}
+
 	public String getUpchecd() {
 		return upchecd;
 	}
@@ -324,6 +381,18 @@ public class ResultObject {
 		this.chk_cont = chk_cont;
 	}
 
+	public void setCmprt0(String cmprt0) {
+		this.cmprt0 = cmprt0;
+	}
+
+	public void setCmprt1(String cmprt1) {
+		this.cmprt1 = cmprt1;
+	}
+
+	public void setCmprt2(String cmprt2) {
+		this.cmprt2 = cmprt2;
+	}
+
 	public void setCont(String cont) {
 		this.cont = cont;
 	}
@@ -360,6 +429,18 @@ public class ResultObject {
 		this.farptitemcd = farptitemcd;
 	}
 
+	public void setFvl0(String fvl0) {
+		this.fvl0 = fvl0;
+	}
+
+	public void setFvl1(String fvl1) {
+		this.fvl1 = fvl1;
+	}
+
+	public void setFvl2(String fvl2) {
+		this.fvl2 = fvl2;
+	}
+
 	public void setGrpnm(String grpnm) {
 		this.grpnm = grpnm;
 	}
@@ -388,6 +469,18 @@ public class ResultObject {
 		this.hang = hang;
 	}
 
+	public void setIndrt0(String indrt0) {
+		this.indrt0 = indrt0;
+	}
+
+	public void setIndrt1(String indrt1) {
+		this.indrt1 = indrt1;
+	}
+
+	public void setIndrt2(String indrt2) {
+		this.indrt2 = indrt2;
+	}
+
 	public void setKiscode(String kiscode) {
 		this.kiscode = kiscode;
 	}
@@ -402,6 +495,10 @@ public class ResultObject {
 
 	public void setMainpdtpcl(String mainpdtpcl) {
 		this.mainpdtpcl = mainpdtpcl;
+	}
+
+	public void setMonunit(String monunit) {
+		this.monunit = monunit;
 	}
 
 	public void setName_eng(String name_eng) {
@@ -466,6 +563,10 @@ public class ResultObject {
 
 	public void setStkcd(String stkcd) {
 		this.stkcd = stkcd;
+	}
+
+	public void setTlevel(String tlevel) {
+		this.tlevel = tlevel;
 	}
 
 	public void setUpchecd(String upchecd) {
