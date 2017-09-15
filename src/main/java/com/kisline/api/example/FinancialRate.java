@@ -35,7 +35,9 @@ public class FinancialRate extends Base {
 			JsonParser parser = new JsonParser();
 
 			paramMap.put("kiscode", "380725");
-			//paramMap.put("stac_date", "20161231");
+			paramMap.put("stac_date", "20161231");
+			// ver : 비율분석구분(0:주요비율, 1:성장성, 2:수익성, 3:안정성, 4:활동성, 5:생산성, 기본 - 0)
+			paramMap.put("ver", "2");
 
 			for (Iterator<String> it = paramMap.keySet().iterator(); it.hasNext();) {
 				key = String.valueOf(it.next());
